@@ -1,15 +1,20 @@
 header.header
 	.container
 		.row.header__content
-			.col-md-12
+			.col-md-8
 				.header__logo(style="background-image: url('img/icons/logo-header.png');")
 					img(src="img/icons/logo-header.png", alt="Экономэнерго лого")
 				h1.header__title
 					|Экономэнерго
-			.col-md-12
-				input.input_rounded
-				a(href="#" download).btn
+			.col-md-8.col-md-offset-1.header__center-block
+				input.input_rounded.header__input
+				a(href="#" download).btn.header__btn
 					|Скачать прайс-лист
+			.col-md-5.col-md-offset-2.header__center-block
+				a(href="").header__tel
+					|+7 987 456-12-37
+				a(href="#").btn.header__btn
+					|Обратный звонок
 	nav.nav
 		.container
 			ul.nav__list
