@@ -130,7 +130,7 @@ gulp.task('clean', function() {
 gulp.task('build', gulp.series(
     'clean',
     'fonts',
-    gulp.parallel('styles', 'styles:vendor', 'images', 'build:pug', 'build:js'))
+    gulp.parallel('styles', 'styles:vendor', 'images', 'build:pug'))
 );
 
 gulp.task('dev',
