@@ -1,11 +1,15 @@
 header.header
 	.container
-		.row
-			.col-md-6
-				.header__logo
-					img(src="img/icons/logo-1.png", alt="Экономэнерго лого")
+		.row.header__content
+			.col-md-12
+				.header__logo(style="background-image: url('img/icons/logo-header.png');")
+					img(src="img/icons/logo-header.png", alt="Экономэнерго лого")
 				h1.header__title
 					|Экономэнерго
+			.col-md-12
+				input.input_rounded
+				a(href="#" download).btn
+					|Скачать прайс-лист
 	nav.nav
 		.container
 			ul.nav__list

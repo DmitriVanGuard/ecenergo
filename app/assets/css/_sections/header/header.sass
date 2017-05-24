@@ -1,5 +1,16 @@
 .header
 	box-shadow: 0 1px 5px #aaa
-
+	&__content
+		padding: 14px 14px 21px
 	&__logo
 		display: inline-block
+		@extend %picture
+		vertical-align: middle
+		margin-right: 10px
+
+	&__title
+		color: $blue
+		display: inline-block
+		font-family: 'Open Sans'
+		text-transform: uppercase
+		vertical-align: middle
