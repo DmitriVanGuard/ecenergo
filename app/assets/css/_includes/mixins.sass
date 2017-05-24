@@ -1,0 +1,54 @@
+=responsive($device)
+	@if $device == 'desktop'
+		@media only screen and (min-width: ($laptop + 1px))
+			@content
+	@if $device == 'laptop'
+		@media only screen and (min-width: ($tablet + 1px)) and (max-width: $laptop)
+			@content
+	@if $device == 'tablet'
+		@media only screen and (min-width: ($phone + 1px)) and (max-width: $tablet)
+			@content
+	@if $device == 'phone'
+		@media only screen and (max-width: $phone)
+			@content
+
+
+
+%picture
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+
+%centering
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+%clearfix
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+%side-lines
+	display: inline-block
+	content: ''
+	width: 22px
+	height: 5px
+	background-color: rgba(100, 100, 100, 0.3)
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+
+%footer
+	position: relative
+
+	&::after
+		content: ''
+		display: block
+		height: 150px
+
+		+responsive('tablet')
+			height: rem(180px)
+		+responsive('phone')
+			height: rem(260px)

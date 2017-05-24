@@ -1,0 +1,49 @@
+.skew
+	position: absolute
+	top: rem(-282px)
+	height: rem(300px)
+	width: 100%
+	z-index: 3
+
+	+responsive('phone')
+		font-size: 15px
+
+	&__arrow-down
+		position: absolute
+		@extend %centering
+		width: rem(30px)
+		height: rem(50px)
+		z-index: 3
+		top: 0
+		fill: #fff
+		fill-opacity: 0.6
+		cursor: pointer
+		transition: fill-opacity 300ms, transform 300ms
+
+		&:hover
+			fill-opacity: 1
+			transform: translate(-50%, rem(-13px))
+
+	&__line
+		width: 160%
+		height: rem(400px)
+		fill: #fff
+		position: relative
+		top: rem(-92px)
+		right: 30%
+
+	&__title
+		position: absolute
+		@extend %centering
+		top: 60%
+
+		& > .title-block__graffiti
+			height: em(200px)
+			width: em(490px)
+			fill-opacity: 0.1
+			fill: #222
+
+			+responsive('phone')
+				height: em(110px)
+				width: em(400px)
+				left: 55%
