@@ -1,6 +1,19 @@
 .nav
+	background-color: $blue
 	&__list
 		font-size: 0
 	&__item
 		display: inline-block
-		font-size: 1rem
+		font-family: 'Open Sans', sans-serif
+		font-size: 14px
+		padding: 20px 25px
+		text-transform: uppercase
+		color: #fff
+		cursor: pointer
+
+		&:hover
+			color: $dark-blue
+			
+		&_selected
+			background-color: #fff
+			color: $dark-blue
