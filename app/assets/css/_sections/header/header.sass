@@ -20,7 +20,20 @@
 		padding: 3px 0
 
 	&__input
+		position: relative
+	&__search
 		margin-bottom: 10px
+		position: relative
+		&::after
+			content: ''
+			display: inline-block
+			background-color: red
+			position: absolute
+			right: 0
+			left: 95%
+			top: 0
+			bottom: 0
+
 	&__telephone
 		margin-bottom: 7px
-		
+
