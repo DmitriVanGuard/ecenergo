@@ -3,19 +3,24 @@
 	color: #fff
 
 	&__row
+		position: relative
 		padding: 18px 0
+		&:first-of-type
+			&::before
+				content: ''
+				display: block
+				height: 1px
+				position: absolute
+				bottom: 0
+				left: -50%
+				right: -50%
+				background-color: #fff
 	
 	&__upper
 		position: relative
-		&::before
-			content: ''
-			display: block
-			height: 1px
-			position: absolute
-			bottom: 0
-			left: -50%
-			right: -50%
-			background-color: #fff
+	&__rights, &__adress
+		position: absolute
+		bottom: 0
 
 	&__item
 		margin-bottom: 10px
@@ -26,8 +31,17 @@
 
 	&__contacts
 		text-align: right
+		position: static
+
+	&__adress
+		padding: inherit//Hack
+		right: 0
+
 	&__telephone
 		color: #fff
+
+	&__info
+		position: static
 	&__left
 		float: left
 	&__right
