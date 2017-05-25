@@ -21,24 +21,32 @@ header.header
 	nav.nav
 		.container
 			ul.nav__list
-				li.nav__item.nav__item_active.nav__item_dropdown Компания
-					ul.dropdown
-						li.dropdown__item Пункт не активен
-						li.dropdown__item.dropdown__item_active.dropdown__item_submenu Пункт активен
-							i(class="fa fa-angle-right", aria-hidden="true").dropdown__item_submenu-icon
-							ul.submenu
-								li.submenu__item item1
-								li.submenu__item item2
-								li.submenu__item item3
-						li.dropdown__item Пункт 	
-						li.dropdown__item Курсор
-						li.dropdown__item Пункт 	
-				li.nav__item.nav__item_dropdown Услуги
-					ul.dropdown
-						li.dropdown__item Пункт не активен
-						li.dropdown__item.dropdown__item_active Пункт активен
-						li.dropdown__item Пункт 	
-						li.dropdown__item Курсор
-						li.dropdown__item Пункт
-				li.nav__item Каталог
-				li.nav__item Контакты
+				a.nav__link(href="index.html")
+					li.nav__item.nav__item_dropdown(class=INDEX ? 'nav__item_active' : '')
+						|Компания
+						ul.dropdown
+							li.dropdown__item Пункт не активен
+							li.dropdown__item.dropdown__item_active.dropdown__item_submenu Пункт активен
+								i(class="fa fa-angle-right", aria-hidden="true").dropdown__item_submenu-icon
+								ul.submenu
+									li.submenu__item item1
+									li.submenu__item item2
+									li.submenu__item item3
+							li.dropdown__item Пункт 	
+							li.dropdown__item Курсор
+							li.dropdown__item Пункт 	
+				a.nav__link(href="service.html")
+					li.nav__item.nav__item_dropdown(class=SERVICE ? 'nav__item_active' : '')
+						|Услуги
+						ul.dropdown
+							li.dropdown__item Пункт не активен
+							li.dropdown__item.dropdown__item_active Пункт активен
+							li.dropdown__item Пункт 	
+							li.dropdown__item Курсор
+							li.dropdown__item Пункт
+				a.nav__link(href="catalog.html")
+					li.nav__item(class=CATALOG ? 'nav__item_active' : '')
+						|Каталог
+				a.nav__link(href="contacts.html")
+					li.nav__item(class=CONTACTS ? 'nav__item_active' : '')
+						|Контакты
