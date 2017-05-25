@@ -16,10 +16,14 @@
 		&:hover
 			color: $dark-blue
 
-		&::after
+		&_dropdown:hover::after
+			visibility: visible
+
+		&_dropdown::after
 			position: absolute
 			top: 100%
 			left: 50%
+			visibility: hidden
 			box-shadow: 0 0 3px #888
 			content: ''
 			z-index: -1
@@ -30,10 +34,9 @@
 			border-right: 5px solid #fff
 			border-bottom: 5px solid #fff
 
-
-		
-		&:hover > .dropdown
-			left: 0	
+		&_dropdown:hover > .dropdown
+			left: 0
+			right: -50%
 
 		&_active
 			background-color: #fff
