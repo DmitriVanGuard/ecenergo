@@ -1,11 +1,18 @@
 .map-sct
 	background-image: url("../../img/bg/map-bg.jpg")
-	height: 700px
+	height: 100vh
+	position: relative
 
 	&__title
 		margin-bottom: 20px
+		font-size: 18px
 	&__contacts
 		margin-bottom: 20px
+	&__mapinfo
+		position: absolute
+		@extend %centering
+		left: 30%
+
 	&__infobox
 		position: relative
 		background-color: #FFF
