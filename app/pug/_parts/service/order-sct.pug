@@ -1,10 +1,13 @@
 section.section.order-sct
 	.container
+		.title-block
+			h2.title.order-sct__title
+				|Заказать
 		form.row.order-sct__form
 			.col-md-8
-				input.input.order-sct__input
+				input.input.order-sct__input(placeholder="Ваше имя", name="name")
 			.col-md-8
-				input.input.order-sct__input
+				input.input.order-sct__input(placeholder="Ваш телефон", name="telephone")
 			.col-md-8
 				button.btn.order-sct__btn(type="submit")
 					|Отправить
