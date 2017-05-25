@@ -10,7 +10,8 @@ html(lang="en")
 		link(rel="stylesheet",type="text/css",href="assets/css/main.min.css")
 
 	body
-		//- include _parts/header.pug
-		block content
-		//- include _parts/footer.pug
+		.wrapper
+			include _parts/header.pug
+			block content
+			include _parts/footer.pug
 		
