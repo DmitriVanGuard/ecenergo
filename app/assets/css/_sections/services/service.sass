@@ -1,0 +1,35 @@
+.service
+	box-shadow: 0 0 3px #888
+	padding-top: 100%
+	position: relative
+
+	&::after, &::before
+		position: absolute
+		content: ''
+		display: inline-block
+		width: 30%
+		height: 30%
+	&::before
+		top: 8%
+		left: 8%
+		border-top: 2px solid $blue
+		border-left: 2px solid $blue
+	&::after
+		bottom: 8%
+		right: 8%
+		border-bottom: 2px solid $blue
+		border-right: 2px solid $blue
+
+	&__content
+		max-width: 80%
+		position: absolute
+		@extend %centering
+		text-align: center
+		color: $blue
+
+	&__icon
+		font-size: 40px
+		margin-bottom: 30px
+		
+	&__name
+		font-size: 20px
