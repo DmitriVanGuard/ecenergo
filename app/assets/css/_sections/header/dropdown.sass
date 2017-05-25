@@ -18,3 +18,15 @@
 		&_active
 			color: #fff
 			background-color: $blue
+
+		&_submenu
+			position: relative
+
+			&-icon
+				position: absolute
+				@extend %centering
+				left: 96%
+
+			&:hover > .submenu
+				left: 100%
+				top: 0
