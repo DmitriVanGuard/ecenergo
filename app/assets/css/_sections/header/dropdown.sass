@@ -1,0 +1,21 @@
+.dropdown
+	position: absolute
+	left: 0
+	top: 100%
+	right: -50%
+	z-index: -1
+	box-shadow: 0 0 3px #888
+
+	&__item
+		padding: 10px 20px
+		background-color: #FFF
+		border-bottom: 1px solid $blue
+		text-transform: initial
+		font-weight: normal
+
+		&:hover
+			background-color: $blue
+			color: $dark-blue
+		&_active
+			color: #fff
+			background-color: $blue

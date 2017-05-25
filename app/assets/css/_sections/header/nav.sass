@@ -4,16 +4,37 @@
 		font-size: 0
 	&__item
 		display: inline-block
+		position: relative
 		font-family: 'Open Sans', sans-serif
 		font-size: 14px
 		padding: 15px 25px
 		text-transform: uppercase
 		color: #fff
 		cursor: pointer
+		font-weight: bold
 
 		&:hover
 			color: $dark-blue
-			
-		&_selected
+
+		&::after
+			position: absolute
+			top: 100%
+			left: 50%
+			box-shadow: 0 0 3px #888
+			content: ''
+			z-index: -1
+			display: inline-block
+			transform: translate(-50%, -50%) scaleX(2) rotate(45deg)
+			border-top: 5px solid transparent
+			border-left: 5px solid transparent
+			border-right: 5px solid #fff
+			border-bottom: 5px solid #fff
+
+
+		
+		&:hover > .dropdown
+			left: 0	
+
+		&_active
 			background-color: #fff
 			color: $dark-blue
