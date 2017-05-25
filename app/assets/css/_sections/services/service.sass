@@ -2,6 +2,7 @@
 	box-shadow: 0 0 3px #888
 	padding-top: 100%
 	position: relative
+	background-color: #FFF
 
 	&::after, &::before
 		position: absolute
@@ -27,9 +28,19 @@
 		text-align: center
 		color: $blue
 
+		.service__icon:nth-of-type(2)
+			position: absolute
+			left: 55%
+			top: 0%
+			z-index: -1
+			font-size: 30px
 	&__icon
 		font-size: 40px
 		margin-bottom: 30px
+
+	.fa-cogs
+		transform: rotateY(180deg)
+
 		
 	&__name
 		font-size: 20px
