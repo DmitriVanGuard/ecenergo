@@ -1,0 +1,27 @@
+.projects-sct
+	&__text
+		float: left
+
+	&__pic
+		display: inline-block
+		@extend %picture
+		float: right
+
+	&__gallery
+		vertical-align: bottom
+		float: left
+		text-align: justify
+		display: inline-block
+		&::after
+			content: ''
+			display: inline-block
+			width: 100%
+			height: 0
+
+	&__preview
+		display: inline-block
+		float: none
+		@extend %picture
+		padding: 0
+		&>img
+			visibility: visible
