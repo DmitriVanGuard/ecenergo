@@ -1,16 +1,26 @@
 .slider
 	position: relative
-	&__list
+
+	&__visible
 		position: absolute
 		@extend %centering
 		left: 75%
+		padding: 0
+		overflow: hidden
+		height: 272px // Better to change with JS for dynamics
+
+	&__list
 		font-size: 0
+		height: inherit
+		width: 900px // Better to change with JS for dynamics
 	&__item
 		padding: 30px 50px
 		background-color: rgba(#333, .5)
 		display: inline-block
+		width: 450px // Better to change with JS for dynamics
 		color: #fff
 		text-align: center
+
 	&__title
 		margin-bottom: 20px
 		font-size: 30px
@@ -19,6 +29,7 @@
 
 	&__text
 		margin-bottom: 20px
+
 	&__btn
 		font-size: 14px
 		width: auto
