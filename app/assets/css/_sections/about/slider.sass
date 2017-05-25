@@ -1,0 +1,47 @@
+.slider
+	position: relative
+	&__list
+		position: absolute
+		@extend %centering
+		left: 75%
+		font-size: 0
+	&__item
+		padding: 30px 50px
+		background-color: rgba(#333, .5)
+		display: inline-block
+		color: #fff
+		text-align: center
+	&__title
+		margin-bottom: 20px
+		font-size: 30px
+		font-weight: 600
+		text-transform: uppercase
+
+	&__text
+		margin-bottom: 20px
+	&__btn
+		font-size: 14px
+		width: auto
+		padding: 5px 20px
+		text-transform: uppercase
+
+	&__toggle
+		padding: 0 8px
+		background-color: #FFF
+		display: inline-block
+		border-radius: 20px
+		position: absolute
+		@extend %centering
+		top: 92%
+
+	&__link
+		display: inline-block
+		margin-right: 26px
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		border: 1px solid $blue
+		&:last-child
+			margin-right: 0
+		&_active
+			background-color: $blue
