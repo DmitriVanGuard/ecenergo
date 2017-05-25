@@ -1,21 +1,24 @@
+.input, .btn
+	outline: none
+	font-size: 17px
 .input
+	padding: 7px 15px
+	border: 1px solid $blue
+	width: 100%
 	&_rounded
 		border-radius: 40px
-		width: 100%
-		padding: 7px 15px
-		border: 1px solid $blue
-		outline: none
 
 .btn
 	display: inline-block
 	text-align: center
-	text-transform: uppercase
 	width: 100%
-	border-radius: 40px
+	border: 0
 	padding: 5px 7px
-	font-size: 17px
 	color: #fff
 	background-color: $blue
+	&_rounded
+		border-radius: 40px
+
 	&:hover
 		color: #fff
 
@@ -37,7 +40,7 @@
 		font-size: 32px
 		padding: 5px 60px
 		position: relative
-		margin: 20px 0
+		margin: 40px 0
 		&::after, &::before
 			position: absolute
 			content: ''

@@ -1,0 +1,26 @@
+.feedback-sct
+	background-image: url("../../img/bg/feedback-bg.jpg")
+	@extend %picture
+	
+	&__form
+		&_right
+			font-size: 0
+
+	&__input
+		margin-bottom: 15px
+		padding: 10px
+		border: 2px solid $blue
+		text-align: center
+		&:last-child
+			margin-bottom: 0
+
+		&_textarea
+			height: 103px
+
+			&::placeholder
+				position: relative
+				top: 50%
+				transform: translateY(-50%)
+
+	&__btn
+		padding: 10px
