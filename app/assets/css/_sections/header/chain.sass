@@ -1,0 +1,20 @@
+.chain
+	text-align: right
+	&__item
+		padding: 15px 0
+		display: inline-block
+		&::after
+			content: '\00bb'
+			display: inline-block
+			margin-right: 2px
+			margin-left: 6px
+			vertical-align: top
+			color: #fff
+		&:last-child
+			&::after
+				display: none
+	&__link
+		color: #fff
+
+		&_active
+			color: $dark-blue
