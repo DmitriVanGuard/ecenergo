@@ -1,0 +1,45 @@
+.information-sct
+	&__characteristics
+		padding: 40px 20px
+		border: 1px solid $blue
+
+	&__subtitle
+		margin-bottom: 15px
+		font-weight: 600
+
+	&__context
+		margin-bottom: 20px
+
+	&__item
+		margin-bottom: 10px
+		&:only-child
+			margin-bottom: 0
+		&::before
+			content: '-'
+			display: inline-block
+			margin: 0 2px
+	
+	&__sublist
+		padding-left: 3%
+		@extend %clearfix
+
+	&__classname
+		clear: left
+		float: left
+		font-weight: 600
+		&::before
+			content: ''
+			display: inline-block
+			vertical-align: middle
+			width: 1px
+			height: 1px
+			background-color: #000
+			margin-right: 5px
+		&::after
+			content: ':'
+			display: inline-block
+			margin-right: 5px
+
+
+	&__definition
+		margin: 0
