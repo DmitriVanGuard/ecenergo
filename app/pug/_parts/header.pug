@@ -4,7 +4,7 @@ header.header
 			.col-md-8
 				.header__logo(style="background-image: url('img/icons/logo-header.png');")
 					img(src="img/icons/logo-header.png", alt="Экономэнерго лого")
-				h1.header__title
+				h2.header__title
 					|Экономэнерго
 			.col-md-8.col-md-offset-1.header__center-block
 				.header__search
@@ -14,39 +14,39 @@ header.header
 				a(href="#" download).btn.btn_rounded.header__btn
 					|Скачать прайс-лист
 			.col-md-5.col-md-offset-2.header__right
-				.telephone.header__tel
+				h1.telephone.header__tel
 					|+7 987 456-12-37
 				a(href="#").btn.btn_rounded.header__btn.header__btn_bottom
 					|Обратный звонок
 	nav.nav
 		.container
 			ul.nav__list
-				a.nav__link(href="index.html")
-					li.nav__item.nav__item_dropdown(class=INDEX ? 'nav__item_active' : '')
+				li.nav__item.nav__item_dropdown(class=INDEX ? 'nav__item_active' : '')
+					a.nav__link(href="index.html")
 						|Компания
-						ul.dropdown
-							li.dropdown__item Пункт не активен
-							li.dropdown__item.dropdown__item_active.dropdown__item_submenu Пункт активен
-								i(class="fa fa-angle-right", aria-hidden="true").dropdown__item_submenu-icon
-								ul.submenu
-									li.submenu__item item1
-									li.submenu__item item2
-									li.submenu__item item3
-							li.dropdown__item Пункт 	
-							li.dropdown__item Курсор
-							li.dropdown__item Пункт 	
-				a.nav__link(href="service.html")
-					li.nav__item.nav__item_dropdown(class=SERVICE ? 'nav__item_active' : '')
-						|Услуги
-						ul.dropdown
-							li.dropdown__item Пункт не активен
-							li.dropdown__item.dropdown__item_active Пункт активен
-							li.dropdown__item Пункт 	
-							li.dropdown__item Курсор
-							li.dropdown__item Пункт
-				a.nav__link(href="catalog.html")
-					li.nav__item(class=CATALOG ? 'nav__item_active' : '')
+					ul.dropdown
+						li.dropdown__item Пункт не активен
+						li.dropdown__item.dropdown__item_active.dropdown__item_submenu Пункт активен
+							i(class="fa fa-angle-right", aria-hidden="true").dropdown__item_submenu-icon
+							ul.submenu
+								li.submenu__item item1
+								li.submenu__item item2
+								li.submenu__item item3
+						li.dropdown__item Пункт 	
+						li.dropdown__item Курсор
+						li.dropdown__item Пункт 	
+				li.nav__item.nav__item_dropdown(class=SERVICE ? 'nav__item_active' : '')
+					a.nav__link(href="service.html")
+						| Услуги
+					ul.dropdown
+						li.dropdown__item Пункт не активен
+						li.dropdown__item.dropdown__item_active Пункт активен
+						li.dropdown__item Пункт 	
+						li.dropdown__item Курсор
+						li.dropdown__item Пункт
+				li.nav__item(class=CATALOG ? 'nav__item_active' : '')
+					a.nav__link(href="catalog.html")
 						|Каталог
-				a.nav__link(href="contacts.html")
-					li.nav__item(class=CONTACTS ? 'nav__item_active' : '')
+				li.nav__item(class=CONTACTS ? 'nav__item_active' : '')
+					a.nav__link(href="contacts.html")
 						|Контакты
