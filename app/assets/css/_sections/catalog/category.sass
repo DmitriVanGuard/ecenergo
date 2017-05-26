@@ -1,5 +1,5 @@
 .category
-	// margin-bottom: 10px
+
 	&__item
 		// background-color: $blue
 		padding-bottom: 10px
@@ -10,27 +10,38 @@
 			padding-right: 0
 	&__icon
 		margin-left: 7px
-	&__btn
-		color: #fff
-		border: 1px solid $blue
-		position: relative
 
-		&_active
+	&__radio
+		display: none
+
+		&:checked + .category__tab
 			background-color: #fff
 			color: #333
-			&:hover
-				color: #333
+			border: 1px solid red
+			border-bottom: 1px solid transparent
+			 
+	&__tab
+		background-color: $blue
+		color: #fff
+		position: relative
+		text-align: center
+		padding: 10px 10px
+		border: 1px solid transparent
+		border-bottom: 1px solid red
+		margin: 0 0 -1px
+		cursor: pointer
 
-			&::after
-				content: ''
-				display: block
-				left: -1px
-				right: -1px
-				width: calc(100% + 2px)
-				height: 22px
-				top: calc(100% - 10px)
-				position: absolute
-				background-color: #FFF
-				border-left: 1px solid $blue
-				border-right: 1px solid $blue
+		&_active
+			// &::after
+			// 	content: ''
+			// 	display: block
+			// 	left: -1px
+			// 	right: -1px
+			// 	width: calc(100% + 2px)
+			// 	height: 22px
+			// 	top: calc(100% - 10px)
+			// 	position: absolute
+			// 	background-color: #FFF
+			// 	border-left: 1px solid $blue
+			// 	border-right: 1px solid $blue
 

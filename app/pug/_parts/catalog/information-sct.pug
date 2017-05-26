@@ -1,19 +1,32 @@
 section.information-sct
 	.container
 		.category.row
+			//- .col-md-8.category__item
+			//- 	a(href="#").btn.category__btn
+			//- 		|Гарантийный срок эксплуатации
+			//- 		i(class="fa fa-level-down", aria-hidden="true").category__icon
+			//- .col-md-8.category__item
+			//- 	a(href="#").btn.category__btn.category__btn_active
+			//- 		|Гарантийный срок эксплуатации
+			//- 		i(class="fa fa-level-down", aria-hidden="true").category__icon
+			//- .col-md-8.category__item
+			//- 	a(href="#").btn.category__btn
+			//- 		|Гарантийный срок эксплуатации
+			//- 		i(class="fa fa-level-down", aria-hidden="true").category__icon
 			.col-md-24
-				.col-md-8.category__item
-					a(href="#").btn.category__btn
-						|Гарантийный срок эксплуатации
-						i(class="fa fa-level-down", aria-hidden="true").category__icon
-				.col-md-8.category__item
-					a(href="#").btn.category__btn.category__btn_active
-						|Гарантийный срок эксплуатации
-						i(class="fa fa-level-down", aria-hidden="true").category__icon
-				.col-md-8.category__item
-					a(href="#").btn.category__btn
-						|Гарантийный срок эксплуатации
-						i(class="fa fa-level-down", aria-hidden="true").category__icon
+				input(type="radio", id="tab1", name="tabs").category__radio
+				label(for="tab1").category__tab.col-md-8
+					|Гарантийный срок эксплуатации
+					i(class="fa fa-level-down", aria-hidden="true").category__icon
+				input(type="radio", id="tab2", name="tabs").category__radio
+				label(for="tab2").category__tab.category__tab_active.col-md-8
+					|Гарантийный срок эксплуатации
+					i(class="fa fa-level-down", aria-hidden="true").category__icon
+				input(type="radio", id="tab3", name="tabs").category__radio
+				label(for="tab3").category__tab.col-md-8
+					|Гарантийный срок эксплуатации
+					i(class="fa fa-level-down", aria-hidden="true").category__icon
+
 		.information-sct__characteristics
 			.information-sct__context
 				h3.information-sct__subtitle.itemcard-sct__subtitle.uppercase
