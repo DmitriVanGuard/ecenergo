@@ -1,5 +1,4 @@
 .about-sct
-	box-shadow: 0 1px 8px #888
 	position: relative
 	&__slider
 		background-image: url("../../img/bg/about-bg.jpg")
@@ -8,6 +7,9 @@
 
 	&__about
 		padding: 30px
+		box-shadow: 0 1px 8px #888
+		margin-bottom: 40px
+
 	&__pros
 		display: inline-block
 		&_right
@@ -20,7 +22,13 @@
 		vertical-align: middle
 		margin-right: 10px
 	&__text
-		display: inline-block
-		vertical-align: middle
-		max-width: 61%
-		text-align: left
+		&_pros
+			display: inline-block
+			vertical-align: middle
+			max-width: 61%
+			text-align: left
+		&_paragraph
+			margin-bottom: 15px
+
+			&:last-child
+				margin-bottom: 40px
