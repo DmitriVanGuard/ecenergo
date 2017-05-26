@@ -1,4 +1,5 @@
 .information-sct
+	padding-bottom: 30px
 	&__characteristics
 		padding: 40px 20px
 		border: 1px solid $blue
@@ -27,14 +28,19 @@
 		clear: left
 		float: left
 		font-weight: 600
+		text-transform: capitalize
+		position: relative
 		&::before
 			content: ''
 			display: inline-block
 			vertical-align: middle
-			width: 1px
-			height: 1px
+			width: 2px
+			height: 2px
 			background-color: #000
 			margin-right: 5px
+			position: absolute
+			right: 101%
+			top: 50%
 		&::after
 			content: ':'
 			display: inline-block
