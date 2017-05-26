@@ -14,34 +14,53 @@
 	&__radio
 		display: none
 
-		&:checked + .category__tab
+		&:checked + .category__tab > .category__label
 			background-color: #fff
 			color: #333
-			border: 1px solid red
+			border: 1px solid $blue
 			border-bottom: 1px solid transparent
+			&::after
+				content: ''
+				display: block
+				left: -1px
+				right: -1px
+				height: 23px
+				z-index: 2
+				top: calc(100% - 10px)
+				position: absolute
+				background-color: #FFF
+				border-left: 1px solid $blue
+				border-right: 1px solid $blue
+				border-bottom: 1px solid #fff
 			 
 	&__tab
-		background-color: $blue
+		background-color: #fff
 		color: #fff
-		position: relative
 		text-align: center
-		padding: 10px 10px
 		border: 1px solid transparent
-		border-bottom: 1px solid red
 		margin: 0 0 -1px
 		cursor: pointer
+		margin-bottom: 10px
+		&:first-of-type > label
+			margin-left: -21px
+		&:nth-of-type(3) > label
+			margin-right: -21px
 
-		// &_active
-			// &::after
-			// 	content: ''
-			// 	display: block
-			// 	left: -1px
-			// 	right: -1px
-			// 	width: calc(100% + 2px)
-			// 	height: 22px
-			// 	top: calc(100% - 10px)
-			// 	position: absolute
-			// 	background-color: #FFF
-			// 	border-left: 1px solid $blue
-			// 	border-right: 1px solid $blue
+	&__label
+		background-color: $blue
+		display: inline-block
+		border: 1px solid transparent
+		padding: 10px
+		width: 100%
+		position: relative
+		cursor: pointer
+
+#tab1:checked ~ .information-sct__warranty,
+#tab2:checked ~ .information-sct__characteristics,
+#tab3:checked ~ .information-sct__thermo
+	display: block
+
+.information-sct__warranty, .information-sct__characteristics, .information-sct__thermo
+	display: none
+		
 
