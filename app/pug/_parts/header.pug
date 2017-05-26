@@ -1,26 +1,26 @@
 header.header
 	.container
 		.row.header__content
-			.col-md-8
-				.header__logo(style="background-image: url('img/icons/logo-header.png');")
+			.col-lg-8.col-md-9
+				.header__logo
 					img(src="img/icons/logo-header.png", alt="Экономэнерго лого")
 				h2.header__title
 					|Экономэнерго
-			.col-md-8.col-md-offset-1.header__center-block
+			.header__center-block.col-lg-8.col-lg-offset-1.col-md-8
 				.header__search
 					a.header__search_btn(href="#")
 						i(class="fa fa-search",aria-hidden="true").header__search_icon
 					input.input.input_rounded.header__input.header__input_search
 				a(href="#" download).btn.btn_rounded.header__btn.uppercase
 					|Скачать прайс-лист
-			.col-md-5.col-md-offset-2.header__right
+			.header__right.col-lg-5.col-lg-offset-2.col-md-7
 				h1.telephone.header__tel
 					|+7 987 456-12-37
 				a(href="#").btn.btn_rounded.header__btn.header__btn_bottom.uppercase
 					|Обратный звонок
 	nav.nav
 		.container
-			ul.nav__list.col-md-12
+			ul.nav__list.col-lg-18.col-md-18
 				li.nav__item.nav__item_dropdown(class=INDEX ? 'nav__item_active' : '')
 					a.nav__link(href="index.html")
 						|Компания
@@ -52,7 +52,7 @@ header.header
 				li.nav__item(class=CONTACTS ? 'nav__item_active' : '')
 					a.nav__link(href="contacts.html")
 						|Контакты
-			ul.nav__chain.chain.col-md-12
+			ul.nav__chain.chain.col-lg-6.com-md-6
 				li.chain__item
 					a.chain__link(href="#")
 						|Компания

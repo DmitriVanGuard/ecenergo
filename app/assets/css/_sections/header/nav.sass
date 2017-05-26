@@ -8,7 +8,7 @@
 	&__item
 		display: inline-block
 		position: relative
-		font-size: 14px
+		font-size: rem(14px)
 		text-transform: uppercase
 		color: #fff
 		cursor: pointer
@@ -47,4 +47,6 @@
 	&__link
 		display: inline-block
 		color: #fff
-		padding: rem(15px) rem(25px)
+		padding: rem(14px) rem(17px)
+		+responsive('desktop')
+			padding: rem(15px) rem(25px)
