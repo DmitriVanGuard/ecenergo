@@ -4,10 +4,14 @@
 	&__visible
 		position: absolute
 		@extend %centering
-		left: 75%
 		padding: 0
 		overflow: hidden
 		height: rem(272px) // Better to change with JS for dynamics
+		width: rem(422px)
+		+responsive('laptop')
+			left: 75%
+		+responsive('desktop')
+			left: 75%
 
 	&__list
 		font-size: 0

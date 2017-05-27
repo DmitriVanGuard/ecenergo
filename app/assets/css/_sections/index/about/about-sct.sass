@@ -36,8 +36,9 @@
 		img
 			max-width: 100%
 	&__row
-		display: flex
 		align-items: center
+		+responsive('tablet')
+			display: flex
 
 	&__text
 		&_pros

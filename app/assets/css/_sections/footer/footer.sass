@@ -19,22 +19,20 @@
 	
 	&__upper
 		position: relative
-	&__rights, &__adress
-		// position: absolute
-		// bottom: 0
-		// left: 0
-		// right: 0
+		margin-left: -10px
+		margin-right: -10px
+	&__mid, &__nav
+		display: none
+		+responsive('desktop')
+			display: inline-block
+		+responsive('laptop')
+			display: inline-block
 
 	&__nav
-		display: inline-block
 		position: absolute
 		@extend %centering
-		left: 55%
-		+responsive('desktop')
-			left: 50%
-		+responsive('laptop')
-			left: 50%
-
+		left: 50%
+		display: none
 
 	&__item
 		margin-bottom: rem(5px)
@@ -63,7 +61,10 @@
 		text-align: right
 
 	&__left, &__right
-		max-width: 90%
+		+responsive('desktop')
+			max-width: 90%
+		+responsive('laptop')
+			max-width: 90%
 
 	&__right
 		float: right

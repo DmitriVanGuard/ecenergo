@@ -10,11 +10,19 @@
 		position: relative
 		display: flex
 		align-items: center
+		+responsive('phone')
+			display: block
+		+responsive('phone-xs')
+			display: block
 
 	&__company
 		// text-align: center
+
 		+responsive('tablet')
 			text-align: center
+		+responsive('phone')
+			margin-bottom: 10px
+		+responsive('tablet')
 
 	&__logo
 		display: inline-block
