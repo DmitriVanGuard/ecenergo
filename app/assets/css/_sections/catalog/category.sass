@@ -37,7 +37,7 @@
 				+responsive('phone')
 					height: 13px
 				+responsive('phone-xs')
-					height: 12px
+					height: 13px
 			 
 	&__tab
 		background-color: #fff
@@ -49,9 +49,16 @@
 		margin-bottom: rem(10px)
 		&:first-of-type > label
 			margin-left: -22px
+
 		&:nth-of-type(3) > label
 			margin-right: -22px
-
+		+responsive('phone-xs')
+			&:first-of-type
+				padding-right: 0
+			&:nth-of-type(2)
+				padding: 0 5px
+			&:nth-of-type(3)
+				padding-left: 0
 	&__label
 		background-color: $blue
 		display: inline-block
@@ -60,6 +67,13 @@
 		width: 100%
 		position: relative
 		cursor: pointer
+
+		i
+			margin-left: 5px
+		
+		+responsive('phone-xs')
+			padding: rem(5px)
+			font-size: 0.9rem
 
 #tab1:checked ~ .information-sct__warranty,
 #tab2:checked ~ .information-sct__characteristics,
