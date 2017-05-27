@@ -12,6 +12,23 @@
 		@media only screen and (max-width: $phone)
 			@content
 
+=responsive($device)
+	@if $device == 'desktop'
+		@media only screen and (min-width: $desktop)
+			@content
+	@if $device == 'laptop'
+		@media only screen and (min-width: $laptop) and (max-width: ($desktop - 1px))
+			@content
+	@if $device == 'tablet'
+		@media only screen and (min-width: $tablet) and (max-width: ($laptop - 1px))
+			@content
+	@if $device == 'phone'
+		@media only screen and (min-width: $phone) and (max-width: ($tablet - 1px))
+			@content
+	@if $device == 'phone-xs'
+		@media only screen and (max-width: $phone)
+			@content
+
 %picture
 	background-size: cover
 	background-repeat: no-repeat
