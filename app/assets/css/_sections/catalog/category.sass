@@ -31,6 +31,13 @@
 				background-color: #FFF
 				border-left: 1px solid $blue
 				border-right: 1px solid $blue
+
+				+responsive('laptop')
+					height: 14px
+				+responsive('phone')
+					height: 13px
+				+responsive('phone-xs')
+					height: 12px
 			 
 	&__tab
 		background-color: #fff
@@ -41,9 +48,9 @@
 		cursor: pointer
 		margin-bottom: rem(10px)
 		&:first-of-type > label
-			margin-left: rem(-22px)
+			margin-left: -22px
 		&:nth-of-type(3) > label
-			margin-right: rem(-22px)
+			margin-right: -22px
 
 	&__label
 		background-color: $blue
