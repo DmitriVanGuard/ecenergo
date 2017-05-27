@@ -29,6 +29,12 @@
 		display: inline-block
 		position: absolute
 		@extend %centering
+		left: 55%
+		+responsive('desktop')
+			left: 50%
+		+responsive('laptop')
+			left: 50%
+
 
 	&__item
 		margin-bottom: rem(5px)
@@ -56,10 +62,11 @@
 		display: table-cell
 		text-align: right
 
-	&__info
-		position: static
-	&__left
+	&__left, &__right
+		max-width: 90%
+
 	&__right
+		float: right
 		text-align: right
 
 	

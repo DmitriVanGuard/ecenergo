@@ -27,8 +27,17 @@
 		font-weight: 600
 		text-transform: uppercase
 
+		+responsive('tablet')
+			font-size: 1.4rem
+		+responsive('phone')
+			font-size: 1.4rem
+
 	&__text
 		margin-bottom: rem(20px)
+		+responsive('tablet')
+			font-size: 0.8rem
+		+responsive('phone')
+			font-size: 0.8rem
 
 	&__btn
 		font-size: rem(14px)
