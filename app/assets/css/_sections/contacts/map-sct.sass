@@ -21,15 +21,22 @@
 		padding: rem(20px)
 		max-height: 95%
 		+responsive('phone')
-			top: 30%
-
+			top: 40%
+			text-align: center
+		+responsive('phone-xs')
+			top: 40%
+		
 	&__row
 		@extend %clearfix
 		display: flex
-		flex-direction: column
+		flex-direction: row
 		padding: 0
-		+responsive('desktop')
-			flex-direction: row
+		+responsive('laptop')
+			flex-direction: column
+		+responsive('tablet')
+			flex-direction: column
+		+responsive('phone-xs')
+			display: block
 	&__address
 		margin-bottom: rem(15px)
 		+responsive('desktop')
@@ -37,11 +44,14 @@
 	&__online
 		+responsive('desktop')
 			padding: 0
+		+responsive('phone-xs')
+			margin-bottom: 20px
 		
 	&__telephone
 		vertical-align: top
 		display: inline-block
 		margin-bottom: rem(15px)
+		
 	&__email
 		display: inline-block
 		vertical-align: bottom
@@ -52,9 +62,8 @@
 	&__pic
 		display: inline-block
 		padding: 0
-		border: 1px solid $blue
-		float: none
 		img
+			border: 1px solid $blue
 			max-width: 100%
 	&__text
 		display: inline-block
