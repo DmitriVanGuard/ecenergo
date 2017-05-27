@@ -51,13 +51,17 @@
 			border-left: 5px solid transparent
 			border-right: 5px solid #fff
 			border-bottom: 5px solid #fff
+			+responsive('phone')
+				display: none
 
 		&_dropdown:hover > .dropdown
 			left: 0
 
 		&_active
 			background-color: #fff
-			
+
+			.dropdown__btn
+				color: $dark-blue
 			.nav__link
 				color: $dark-blue
 

@@ -5,6 +5,12 @@
 	z-index: -1
 	box-shadow: 0 0 3px #888
 
+	+responsive('phone')
+		position: static
+		transition: height 300ms
+		height: 0
+		overflow: hidden
+
 	&__item
 		padding: rem(10px) rem(20px)
 		background-color: #FFF
@@ -19,6 +25,9 @@
 		&_active
 			color: #fff
 			background-color: $blue
+			+responsive('phone')
+				background-color: #FFF
+				color: $dark-blue
 
 		&_submenu
 			position: relative
@@ -29,6 +38,33 @@
 				left: 96%
 				color: #fff
 
+				+responsive('phone')
+					color: $dark-blue
+					font-size: 20px
+
 			&:hover > .submenu
 				left: 100%
 				top: 0
+
+	&__btn
+		position: absolute
+		display: inline-block
+		top: 0
+		left: initial
+		right: 0
+		vertical-align: middle 
+		font-size: 20px
+		z-index: 4
+		width: 40px
+		height: 40px
+
+		i
+			position: absolute
+			@extend %centering
+
+#drop1:checked ~ .dropdown
+	display: block
+	height: 187px //BETTER CHANGE WITH JS
+#drop2:checked ~ .dropdown
+	display: block
+	height: 187px //BETTER CHANGE WITH JS
