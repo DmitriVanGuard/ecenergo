@@ -3,6 +3,7 @@
 		@extend %justify-content
 	&__link
 		display: inline-block
+
 	&__title
 		font-weight: 400
 		font-size: rem(26px)
@@ -11,8 +12,11 @@
 		float: none
 		padding: rem(15px)
 		margin-bottom: rem(10px)
+		+responsive('phone')
+			padding: rem(40px)
 
 	&__pic
+		margin-bottom: -1px
 		img
 			max-width: 100%
 	&__description
@@ -21,3 +25,10 @@
 		background-color: $blue
 		text-align: center
 		color: #fff
+
+		+responsive('tablet')
+			height: rem(70px)
+		+responsive('phone')
+			height: auto
+		+responsive('phone-xs')
+			height: auto
