@@ -36,6 +36,9 @@
 		width: rem(73px)
 		img
 			max-width: 100%
+		+responsive('tablet')
+			margin-top: -5px
+			margin-bottom: -5px
 
 	&__title
 		color: $blue
@@ -87,6 +90,10 @@
 		left: calc(100% - 40px)
 		color: $blue
 		font-size: 30px
+
+		+responsive('tablet')
+			left: calc(100% - 50px)
+			top: 40px
 
 #hamb:checked ~ .nav
 	right: 100%
