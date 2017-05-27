@@ -8,14 +8,13 @@
 
 	&__content
 		@extend %justify-content
+		+responsive('phone')
+			padding: 0 7%
+		+responsive('tablet')
+			padding: 0 7%
 		
 	&__thumbnail
 		margin-bottom: rem(20px)
 		display: inline-block
 		float: none
 
-	&__content
-		+responsive('phone')
-			padding: 0 7%
-		+responsive('tablet')
-			padding: 0 7%
