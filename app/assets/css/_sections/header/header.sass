@@ -8,6 +8,13 @@
 	&__content
 		padding: rem(14px)
 		position: relative
+		display: flex
+		align-items: center
+
+	&__company
+		// text-align: center
+		+responsive('tablet')
+			text-align: center
 
 	&__logo
 		display: inline-block
@@ -55,4 +62,4 @@
 			vertical-align: middle
 
 	&__tel
-		margin-bottom: 7%
+		margin-bottom: rem(16px)
