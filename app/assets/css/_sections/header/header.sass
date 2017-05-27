@@ -72,3 +72,13 @@
 
 	&__tel
 		margin-bottom: rem(16px)
+
+	&__hamb
+		position: fixed
+		top: 21px
+		left: calc(100% - 40px)
+		color: $dark-blue
+		font-size: 30px
+
+#hamb:checked ~ .nav
+	right: 100%
