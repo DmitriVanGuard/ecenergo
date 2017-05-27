@@ -12,24 +12,34 @@
 	&__infobox
 		position: absolute
 		@extend %centering
-		left: 30%
+		// left: 30%
 		background-color: #FFF
 		box-shadow: 0 0 8px #888
 		font-size: 0.9rem
 		padding: rem(20px)
 		max-height: 95%
 
-	&__content
-	
+	&__row
+		@extend %clearfix
+		display: flex
+		+responsive('laptop')
+			flex-direction: column
+	&__address
+		margin-bottom: rem(15px)
+		
 	&__telephone
 		vertical-align: top
+		display: inline-block
+		margin-bottom: rem(15px)
 	&__email
+		display: inline-block
 		vertical-align: bottom
 		color: #333
 		&:hover
 			color: #333
 
 	&__pic
+		display: inline-block
 		padding: 0
 		border: 1px solid $blue
 		float: none
