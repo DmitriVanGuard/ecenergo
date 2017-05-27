@@ -1,10 +1,21 @@
 .chain
 	text-align: right
+	+responsive('tablet')
+		position: absolute
+		top: 10px
+		text-align: center
+		padding: 0
 	+responsive('phone')
 		position: absolute
 		top: 10px
 		text-align: center
-		
+		padding: 0
+	+responsive('phone-xs')
+		position: absolute
+		top: 10px
+		text-align: center
+		padding: 0
+
 	&__item
 		display: inline-block
 		padding: rem(12px) 0
@@ -25,6 +36,8 @@
 		font-size: rem(14px)
 
 		+responsive('phone')
+			font-size: rem(16px)
+		+responsive('phone-xs')
 			font-size: rem(16px)
 
 		&_active

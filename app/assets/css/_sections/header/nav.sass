@@ -1,6 +1,21 @@
 .nav
 	background-color: $blue
 	box-shadow: 0 3px 5px -3px #aaa
+	+responsive('tablet')
+		box-shadow: 4px 0px 5px -3px #888
+		position: fixed
+		left: 0
+		top: 0
+		bottom: 0
+		right: 50%	
+		padding: 50px 0
+		overflow: hidden
+		overflow-y: scroll 
+		transition: right 300ms
+		&__container
+			padding: 0
+			max-width: 100%
+			
 	+responsive('phone')
 		box-shadow: 4px 0px 5px -3px #888
 		position: fixed
@@ -12,13 +27,32 @@
 		overflow: hidden
 		overflow-y: scroll 
 		transition: right 300ms
+		&__container
+			padding: 0
 
+	+responsive('phone-xs')
+		box-shadow: 4px 0px 5px -3px #888
+		position: fixed
+		left: 0
+		top: 0
+		bottom: 0
+		right: 30%	
+		padding: 50px 0
+		overflow: hidden
+		overflow-y: scroll 
+		transition: right 300ms
 		&__container
 			padding: 0
 	
 	&__list
 		font-size: 0
+		+responsive('tablet')
+			padding: 0
+			display: block
+			width: 100%
 		+responsive('phone')
+			padding: 0
+		+responsive('phone-xs')
 			padding: 0
 
 
@@ -31,7 +65,15 @@
 		cursor: pointer
 		font-weight: 600
 
+		+responsive('tablet')
+			display: block
+			text-align: center
+			font-size: 14px		
 		+responsive('phone')
+			display: block
+			text-align: center
+			font-size: 14px
+		+responsive('phone-xs')
 			display: block
 			text-align: center
 			font-size: 14px
@@ -56,7 +98,11 @@
 			border-left: 5px solid transparent
 			border-right: 5px solid #fff
 			border-bottom: 5px solid #fff
+			+responsive('tablet')
+				display: none
 			+responsive('phone')
+				display: none
+			+responsive('phone-xs')
 				display: none
 
 		&_dropdown:hover > .dropdown
