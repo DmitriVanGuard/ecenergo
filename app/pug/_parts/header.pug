@@ -1,7 +1,7 @@
 header.header
 	.container
 		.row.header__content
-			.header__company.col-lg-8.col-md-10.col-sm-8.col-xs-20
+			.header__company.col-lg-8.col-md-10.col-sm-8.col-xs-23
 				.header__logo
 					img(src="img/icons/logo-header.png", alt="Экономэнерго лого")
 				h2.header__title
@@ -64,10 +64,13 @@ header.header
 				li.nav__item(class=CONTACTS ? 'nav__item_active' : '')
 					a.nav__link(href="contacts.html")
 						|Контакты
-			ul.nav__chain.chain.col-lg-10.col-md-10.col-sm-10.col-xs-24
+			ul.nav__chain.chain.col-lg-10.col-md-10.col-sm-24.col-xs-24
 				li.chain__item
 					a.chain__link(href="#")
 						|Компания
 				li.chain__item
 					a.chain__link.chain__link_active(href="#")
 						|Lorem
+		.telephone.nav__telephone.hidden-lg.hidden-md
+			i(class="fa fa-phone", aria-hidden="true")
+			|+7 987 456-12-37

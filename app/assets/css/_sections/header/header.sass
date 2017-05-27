@@ -1,6 +1,6 @@
 .header
 	position: relative
-	z-index: 1
+	z-index: 4
 	+responsive('phone')
 		background-color: lighten($blue, 20%)
 		background-color: $dark-blue
@@ -50,6 +50,7 @@
 		+responsive('phone')
 			color: #fff
 		+responsive('phone-xs')
+			font-size: rem(28px)
 			color: #fff
 
 	&__center-block
@@ -90,7 +91,9 @@
 		left: calc(100% - 40px)
 		color: $blue
 		font-size: 30px
-
+		z-index: 5
+		+responsive('phone-xs')
+			top: 18px
 		+responsive('tablet')
 			left: calc(100% - 50px)
 			top: 40px
