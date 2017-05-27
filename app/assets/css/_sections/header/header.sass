@@ -1,7 +1,9 @@
 .header
 	position: relative
 	z-index: 1
-	
+	+responsive('phone')
+		background-color: lighten($blue, 20%)
+
 	&__right
 		text-align: right
 
@@ -20,9 +22,6 @@
 
 		+responsive('tablet')
 			text-align: center
-		+responsive('phone')
-			margin-bottom: 10px
-		+responsive('tablet')
 
 	&__logo
 		display: inline-block
@@ -39,6 +38,8 @@
 		font-size: rem(30px)
 		font-weight: 600
 		vertical-align: middle
+		+responsive('phone')
+			color: #fff
 
 	&__center-block
 		padding: 3px 0

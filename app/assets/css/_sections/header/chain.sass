@@ -1,5 +1,10 @@
 .chain
 	text-align: right
+	+responsive('phone')
+		position: absolute
+		top: 10px
+		text-align: center
+		
 	&__item
 		display: inline-block
 		padding: rem(12px) 0
@@ -19,5 +24,9 @@
 		color: #fff
 		font-size: rem(14px)
 
+		+responsive('phone')
+			font-size: rem(16px)
+
 		&_active
 			color: $dark-blue
+

@@ -1,9 +1,22 @@
 .nav
 	background-color: $blue
 	box-shadow: 0 3px 5px -3px #aaa
+	+responsive('phone')
+		box-shadow: 4px 0px 5px -3px #888
+		position: fixed
+		left: 0
+		top: 0
+		bottom: 0
+		right: 50%	
+		padding: 50px 0
+
+		&__container
+			padding: 0
 	
 	&__list
 		font-size: 0
+		+responsive('phone')
+			padding: 0
 
 	&__item
 		display: inline-block
@@ -13,6 +26,10 @@
 		color: #fff
 		cursor: pointer
 		font-weight: 600
+
+		+responsive('phone')
+			display: block
+			text-align: center
 
 		&:hover
 			color: $dark-blue
@@ -45,7 +62,7 @@
 				color: $dark-blue
 
 	&__link
-		display: inline-block
+		display: inherit
 		color: #fff
 		padding: rem(15px) rem(17px)
 		+responsive('desktop')
