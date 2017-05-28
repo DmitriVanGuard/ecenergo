@@ -85,6 +85,21 @@ gulp.task('fonts', function(){
     .pipe(gulp.dest(paths.fonts.distDev));
 });
 
+// Scripts JS
+gulp.task('build:js', function() {
+  return gulp.src(paths.js.all)
+    .pipe($.plumber({
+      errorHandler: $.notify.onError(function (err) {
+        return {title: 'javaScript', message: err.message}
+      })
+    }))
+    .pipe($.if(isDevelopment, $.sourcemaps.init()))
+    .pipe($.concat('main.min.js'))
+    .pipe($.uglify())
+    .pipe($.if(isDevelopment, $.sourcemaps.write('maps')))
+    .pipe(gulp.dest(paths.js.distDev))
+});
+
 gulp.task('styles:vendor', function(){
   return gulp.src(paths.css.vendor)
     .pipe($.rename('vendor.min.css'))
@@ -119,6 +134,7 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.css.all, gulp.series('styles'));
   gulp.watch('app/img/**/*.*', gulp.series('images'));
+  gulp.watch(paths.js.all, gulp.series('build:js'));
   gulp.watch(paths.pug.all, gulp.series('build:pug'));
 
 });
@@ -130,7 +146,7 @@ gulp.task('clean', function() {
 gulp.task('build', gulp.series(
     'clean',
     'fonts',
-    gulp.parallel('styles', 'styles:vendor', 'images', 'build:pug'))
+    gulp.parallel('styles', 'styles:vendor', 'images', 'build:js', 'build:pug'))
 );
 
 gulp.task('dev',

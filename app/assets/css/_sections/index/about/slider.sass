@@ -19,6 +19,7 @@
 		font-size: 0
 		height: inherit
 		width: rem(900px) // Better to change with JS for dynamics
+		transition: transform 300ms
 	&__item
 		padding: rem(30px) rem(50px)
 		background-color: rgba(#333, .7)
@@ -78,7 +79,9 @@
 		height: 10px
 		border-radius: 50%
 		border: 1px solid $blue
+		transition: background-color 300ms
 		&:last-child
 			margin-right: 0
+
 		&_active
 			background-color: $blue
