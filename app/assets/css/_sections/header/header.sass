@@ -1,6 +1,8 @@
 .header
 	position: relative
 	z-index: 4
+	+responsive('tablet')
+		box-shadow: 0 1px 9px #888
 	+responsive('phone')
 		background-color: lighten($blue, 20%)
 		background-color: $dark-blue
@@ -74,6 +76,8 @@
 			border-left: 1px solid $blue
 			color: $blue
 			text-align: center
+			+responsive('tablet')
+				left: 85%
 			&::before
 				content: ''
 				display: inline-block
@@ -95,8 +99,8 @@
 		+responsive('phone-xs')
 			top: 18px
 		+responsive('tablet')
-			left: calc(100% - 50px)
-			top: 40px
+			left: calc(100% - 45px)
+			top: 38px
 
 #hamb:checked ~ .nav
 	right: 100%
