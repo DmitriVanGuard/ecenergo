@@ -1,7 +1,12 @@
 .map-sct
 	background-image: url("../../img/bg/map-bg.jpg")
-	height: 600px
+	background-position-x: 45%
+	height: 700px
 	position: relative
+	+responsive('phone')
+		background-position: 69% 230px
+	+responsive('phone-xs')
+		background-position: 69% 230px
 
 	&__title
 		margin-bottom: rem(20px)
@@ -20,11 +25,16 @@
 		font-size: 0.9rem
 		padding: rem(20px)
 		max-height: 95%
+		left: 35%
+		+responsive('tablet')
+			left: 37%
 		+responsive('phone')
 			top: 40%
+			left: 50%
 			text-align: center
 		+responsive('phone-xs')
 			top: 40%
+			left: 50%
 		
 	&__row
 		@extend %clearfix
