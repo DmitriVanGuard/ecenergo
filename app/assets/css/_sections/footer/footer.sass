@@ -58,11 +58,22 @@
 	&__telephone
 		color: #fff
 		text-align: right
+		-webkit-text-fill-color: rgba(#fff, 1) //SAFARI FIX ->>
+		-webkit-opacity: 1
+		color: rgba(#fff, 1)
 		&_left
 			text-align: left
 			font-size: rem(20px)
-
-
+	
+	&__xs-center
+		+responsive('phone')
+			text-align: center
+			position: relative
+			left: 22%
+		+responsive('phone-xs')
+			text-align: center
+			position: relative
+			left: 22%
 
 	&__left, &__right
 		+responsive('desktop')
