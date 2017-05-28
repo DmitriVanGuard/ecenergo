@@ -48,7 +48,7 @@ header.header
 						li.dropdown__item Пункт 	
 				li.nav__item.nav__item_dropdown(class=SERVICE ? 'nav__item_active' : '')
 					a.nav__link(href="service.html")
-						| Услуги
+						|Услуги
 					input(type="checkbox", name="dropdown", id="drop2").hidden.dropdown__check
 					label(for="drop2").visible-sm.visible-xs.dropdown__btn
 						i(class="fa fa-angle-down", aria-hidden="true")
@@ -65,12 +65,30 @@ header.header
 					a.nav__link(href="contacts.html")
 						|Контакты
 			ul.nav__chain.chain.col-lg-10.col-md-10.col-sm-24.col-xs-24
-				li.chain__item
-					a.chain__link(href="#")
-						|Компания
-				li.chain__item
-					a.chain__link.chain__link_active(href="#")
-						|Lorem
+				if INDEX
+					li.chain__item
+						a.chain__link.chain__link_active(href="index.html")
+							|Компания
+				else if SERVICE
+					li.chain__item
+						a.chain__link.chain__link_active(href="service.html")
+							|Услуги
+				else if CATALOG && !ITEMCARD
+					li.chain__item
+						a.chain__link.chain__link_active(href="catalog.html")
+							|Каталог
+				else if CONTACTS 
+					li.chain__item
+						a.chain__link.chain__link_active(href="contacts.html")
+							|Контакты
+				else if ITEMCARD
+					li.chain__item
+						a.chain__link(href="catalog.html")
+							|Каталог
+					li.chain__item
+						a.chain__link.chain__link_active(href="#")
+							|Item №
+							
 		.telephone.nav__telephone.hidden-lg.hidden-md
 			i(class="fa fa-phone", aria-hidden="true")
 			|+7 987 456-12-37
